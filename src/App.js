@@ -48,7 +48,7 @@ function App() {
           setNotFoundError("Город не найден");
           setData(null);
         } else if (result.list) {
-          const daysWeatherFour = result.list.filter((_, i) => i % 8 === 0).slice(0, 4);
+          const daysWeatherFour = result.list.filter((item, i) => i % 8 === 0).slice(0, 4);
           setData({ city: result.city, list: daysWeatherFour });
         }
       })
